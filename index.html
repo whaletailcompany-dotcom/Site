@@ -6,11 +6,13 @@
   <title>Megalodon | Agence de Design Graphique & Technologie Numérique</title>
   <link rel="stylesheet" href="styler.css" />
   <link rel="icon" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-  <!-- Vidéo d’arrière-plan -->
+  <!-- Vidéo d'arrière-plan -->
   <div class="video-background">
     <video autoplay muted loop playsinline>
       <source src="background.mp4" type="video/mp4" />
@@ -24,11 +26,19 @@
       <img src="logo.png" alt="Logo Megalodon" class="logo" />
       <img src="CompanyName.png" alt="Megalodon" class="company-name" />
     </div>
-    <nav class="nav">
-      <a href="#home">Accueil</a>
-      <a href="#about">À propos</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
+    
+    <!-- Menu Burger pour mobile -->
+    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    
+    <nav class="nav" id="mainNav">
+      <a href="#home" class="nav-link">Accueil</a>
+      <a href="#about" class="nav-link">À propos</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
     </nav>
   </header>
 
@@ -42,9 +52,15 @@
         <a href="#services" class="btn transparent">Nos services</a>
       </div>
       <div class="socials">
-        <a href="mailto:whaletailcompany@gmail.com"><img src="gmail.png" alt="Gmail" /></a>
-        <a href="https://wa.me/213776532042" target="_blank"><img src="WhatsApp.png" alt="WhatsApp" /></a>
-        <a href="https://www.youtube.com/@megalodoncompany" target="_blank"><img src="YouTube.png" alt="YouTube" /></a>
+        <a href="mailto:whaletailcompany@gmail.com" aria-label="Gmail">
+          <img src="gmail.png" alt="Gmail" />
+        </a>
+        <a href="https://wa.me/213776532042" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="WhatsApp.png" alt="WhatsApp" />
+        </a>
+        <a href="https://www.youtube.com/@megalodoncompany" target="_blank" rel="noopener" aria-label="YouTube">
+          <img src="YouTube.png" alt="YouTube" />
+        </a>
       </div>
     </div>
 
@@ -57,80 +73,99 @@
 
   <!-- Section À propos -->
   <section id="about" class="about">
-    <h2>Qui sommes-nous ?</h2>
-    <p>
-      Une agence de design graphique et de technologies numériques.<br />
-      Nous créons des identités visuelles percutantes et des expériences digitales élégantes.
-    </p>
-    <ul>
-      <li>Identité & logos</li>
-      <li>Publicité & publications</li>
-      <li>Motion design & animation</li>
-      <li>Montage & développement</li>
-    </ul>
-    <div class="decor-video gold-frame">
-      <video autoplay muted loop playsinline>
-        <source src="video2 (1).mp4" type="video/mp4" />
-      </video>
+    <div class="container">
+      <h2>Qui sommes-nous ?</h2>
+      <p class="intro-text">
+        Une agence de design graphique et de technologies numériques.<br />
+        Nous créons des identités visuelles percutantes et des expériences digitales élégantes.
+      </p>
+      <ul class="services-list">
+        <li>Identité & logos</li>
+        <li>Publicité & publications</li>
+        <li>Motion design & animation</li>
+        <li>Montage & développement</li>
+      </ul>
+      <div class="decor-video gold-frame">
+        <video autoplay muted loop playsinline>
+          <source src="video2 (1).mp4" type="video/mp4" />
+        </video>
+      </div>
     </div>
   </section>
 
   <!-- Section Services -->
   <section id="services" class="services">
-    <h2>Nos Services</h2>
-    <p>
-      Nous offrons une gamme complète : identité visuelle, publicités, motion graphics, montage et développement.
-    </p>
+    <div class="container">
+      <h2>Nos Services</h2>
+      <p class="intro-text">
+        Nous offrons une gamme complète : identité visuelle, publicités, motion graphics, montage et développement.
+      </p>
 
-    <div class="videos">
-      <div class="gold-frame">
-        <video autoplay muted loop playsinline>
-          <source src="video3 (1).mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="gold-frame">
-        <video autoplay muted loop playsinline>
-          <source src="video4 (1).mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="gold-frame">
-        <video autoplay muted loop playsinline>
-          <source src="video5 (1).mp4" type="video/mp4" />
-        </video>
+      <div class="videos-grid">
+        <div class="video-item gold-frame">
+          <video autoplay muted loop playsinline>
+            <source src="video3 (1).mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-item gold-frame">
+          <video autoplay muted loop playsinline>
+            <source src="video4 (1).mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="video-item gold-frame">
+          <video autoplay muted loop playsinline>
+            <source src="video5 (1).mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- Section Contact -->
   <section id="contact" class="contact">
-    <h2>Contactez-nous</h2>
-    <p>Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.</p>
+    <div class="container">
+      <h2>Contactez-nous</h2>
+      <p class="intro-text">Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.</p>
 
-    <form id="contactForm" onsubmit="return handleFormSubmit(event)">
-      <input type="text" id="firstName" placeholder="Prénom" required />
-      <input type="text" id="lastName" placeholder="Nom" required />
-      <input type="tel" id="phone" placeholder="Numéro de téléphone" required />
-      <select id="serviceType" required>
-        <option value="">Type de service</option>
-        <option value="Identité visuelle">Identité visuelle</option>
-        <option value="Publicité">Publicité</option>
-        <option value="Motion design">Motion design</option>
-        <option value="Montage">Montage</option>
-        <option value="Développement">Développement</option>
-      </select>
-      <textarea id="details" placeholder="Détails du projet..."></textarea>
-      <button type="submit" class="btn gold">Envoyer</button>
-      <p id="sentConfirm" aria-hidden="true"></p>
-    </form>
+      <form id="contactForm" class="contact-form">
+        <div class="form-row">
+          <input type="text" id="firstName" placeholder="Prénom" required />
+          <input type="text" id="lastName" placeholder="Nom" required />
+        </div>
+        <input type="tel" id="phone" placeholder="Numéro de téléphone" required />
+        <select id="serviceType" required>
+          <option value="">Type de service</option>
+          <option value="Identité visuelle">Identité visuelle</option>
+          <option value="Publicité">Publicité</option>
+          <option value="Motion design">Motion design</option>
+          <option value="Montage">Montage</option>
+          <option value="Développement">Développement</option>
+        </select>
+        <textarea id="details" placeholder="Détails du projet..." rows="5"></textarea>
+        <button type="submit" class="btn gold">Envoyer</button>
+        <p id="sentConfirm" class="confirm-message"></p>
+      </form>
+    </div>
   </section>
 
   <!-- Pied de page -->
   <footer class="footer">
     <img src="logo.png" alt="Megalodon logo" class="small-logo" />
-    <p>Megalodon — Agence de design graphique et de technologies numériques</p>
-    <p>&copy; <span id="year"></span> Megalodon. Tous droits réservés.</p>
+    <p class="footer-title">Megalodon — Agence de design graphique et de technologies numériques</p>
+    <p class="footer-copy">&copy; <span id="year"></span> Megalodon. Tous droits réservés.</p>
+    <div class="footer-socials">
+      <a href="mailto:whaletailcompany@gmail.com" aria-label="Gmail">
+        <img src="gmail.png" alt="Gmail" />
+      </a>
+      <a href="https://wa.me/213776532042" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <img src="WhatsApp.png" alt="WhatsApp" />
+      </a>
+      <a href="https://www.youtube.com/@megalodoncompany" target="_blank" rel="noopener" aria-label="YouTube">
+        <img src="YouTube.png" alt="YouTube" />
+      </a>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
-  </html>
+        </html>
