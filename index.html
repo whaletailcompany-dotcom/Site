@@ -1,171 +1,161 @@
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype html>
+<html lang="fr" dir="ltr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Megalodon | Agence de Design Graphique & Technologie Numérique</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WhaleTail Company — Design Graphique & Solutions Numériques</title>
   <link rel="stylesheet" href="styler.css" />
-  <link rel="icon" href="logo.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta name="description" content="WhaleTail Company — Design graphique et solutions numériques : où l'héritage rencontre l'innovation." />
 </head>
-
 <body>
-  <!-- Vidéo d'arrière-plan -->
-  <div class="video-background">
-    <video autoplay muted loop playsinline>
-      <source src="background.mp4" type="video/mp4" />
-    </video>
-    <div class="overlay"></div>
-  </div>
-
-  <!-- En-tête -->
-  <header class="header">
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo Megalodon" class="logo" />
-      <img src="CompanyName.png" alt="Megalodon" class="company-name" />
-    </div>
-    
-    <!-- Menu Burger pour mobile -->
-    <button class="menu-toggle" id="menuToggle" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <nav class="nav" id="mainNav">
-      <a href="#home" class="nav-link">Accueil</a>
-      <a href="#about" class="nav-link">À propos</a>
-      <a href="#services" class="nav-link">Services</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
-  </header>
-
-  <!-- Section principale -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 class="title">Megalodon</h1>
-      <p class="subtitle">Des designs modernes qui fusionnent art et technologie</p>
-      <div class="buttons">
-        <a href="#contact" class="btn gold">Obtenir un devis</a>
-        <a href="#services" class="btn transparent">Nos services</a>
+  <div id="site" class="site-root">
+    <!-- HEADER -->
+    <header class="topbar">
+      <div class="left">
+        <img src="CompanyName.png" alt="WhaleTail Company" class="logo" />
       </div>
-      <div class="socials">
-        <a href="mailto:whaletailcompany@gmail.com" aria-label="Gmail">
-          <img src="gmail.png" alt="Gmail" />
-        </a>
-        <a href="https://wa.me/213776532042" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <img src="WhatsApp.png" alt="WhatsApp" />
-        </a>
-        <a href="https://www.youtube.com/@megalodoncompany" target="_blank" rel="noopener" aria-label="YouTube">
-          <img src="YouTube.png" alt="YouTube" />
-        </a>
+
+      <div class="center">
+        <h1 class="brand">WhaleTail Company</h1>
+        <p class="tagline">Design graphique et solutions numériques — quand l'héritage rencontre l'innovation</p>
       </div>
-    </div>
 
-    <div class="hero-video gold-frame">
-      <video autoplay muted loop playsinline>
-        <source src="video1 (1).mp4" type="video/mp4" />
-      </video>
-    </div>
-  </section>
+      <div class="right">
+        <button id="aboutBtn" class="icon-btn" aria-label="À propos">
+          <svg viewBox="0 0 24 24" class="icon"><circle cx="12" cy="12" r="10" /><path d="M11 10h2v6h-2zM12 7v.01"/></svg>
+        </button>
 
-  <!-- Section À propos -->
-  <section id="about" class="about">
-    <div class="container">
-      <h2>Qui sommes-nous ?</h2>
-      <p class="intro-text">
-        Une agence de design graphique et de technologies numériques.<br />
-        Nous créons des identités visuelles percutantes et des expériences digitales élégantes.
-      </p>
-      <ul class="services-list">
-        <li>Identité & logos</li>
-        <li>Publicité & publications</li>
-        <li>Motion design & animation</li>
-        <li>Montage & développement</li>
+        <button id="dotsBtn" class="dots-btn" aria-label="Menu">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- DOTS MENU -->
+    <div id="dotsMenu" class="popup dots-menu" aria-hidden="true">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#works">Réalisations</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="decor-video gold-frame">
-        <video autoplay muted loop playsinline>
-          <source src="video2 (1).mp4" type="video/mp4" />
-        </video>
+    </div>
+
+    <!-- ABOUT POPUP -->
+    <div id="aboutPopup" class="modal" aria-hidden="true">
+      <div class="modal-inner">
+        <button class="close" data-close="aboutPopup">✕</button>
+        <h2>À propos de WhaleTail Company</h2>
+        <p>
+          WhaleTail Company est une jeune agence de design graphique et d'ingénierie visuelle.
+          Nous fusionnons <strong>le patrimoine</strong> et l'<strong>innovation technologique</strong> pour créer
+          des identités visuelles puissantes et mémorables. Notre approche combine recherche culturelle,
+          storytelling visuel et technologies modernes — pour des créations qui impactent et convertissent.
+        </p>
       </div>
     </div>
-  </section>
 
-  <!-- Section Services -->
-  <section id="services" class="services">
-    <div class="container">
-      <h2>Nos Services</h2>
-      <p class="intro-text">
-        Nous offrons une gamme complète : identité visuelle, publicités, motion graphics, montage et développement.
-      </p>
+    <!-- HERO / VIDEO -->
+    <main>
+      <section class="hero">
+        <div class="hero-media">
+          <video id="introVideo" autoplay muted loop playsinline>
+            <source src="video2%20(1).mp4" type="video/mp4" />
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+          <div class="hero-overlay">
+            <h2 class="hero-title">Design graphique & Technologie</h2>
+            <p class="hero-sub">Des créations inspirées du patrimoine — puissance visuelle et stratégie numérique</p>
+            <div class="hero-cta">
+              <button id="orderBtn" class="primary large">Demander un service</button>
+              <a href="#works" class="ghost">Voir nos réalisations</a>
+            </div>
+          </div>
+        </div>
+      </section>
 
-      <div class="videos-grid">
-        <div class="video-item gold-frame">
-          <video autoplay muted loop playsinline>
-            <source src="video3 (1).mp4" type="video/mp4" />
-          </video>
+      <!-- SERVICES -->
+      <section id="services" class="section services">
+        <h3 class="section-title">Nos services</h3>
+        <div class="cards">
+          <article class="card"><h4>Identité visuelle</h4><p>Logos, chartes graphiques & guidelines de marque.</p></article>
+          <article class="card"><h4>Packaging & Édition</h4><p>Design d'emballages, affiches et supports imprimés.</p></article>
+          <article class="card"><h4>Motion & Vidéo</h4><p>Animations, vidéos courtes pour réseaux sociaux et présentations.</p></article>
+          <article class="card"><h4>UI / UX & Mockups</h4><p>Design d'interfaces et maquettes interactives.</p></article>
+          <article class="card"><h4>Design culturel / patrimonial</h4><p>Intégration d'éléments hérités pour des créations uniques.</p></article>
+          <article class="card"><h4>Consulting créatif</h4><p>Stratégie visuelle et accompagnement de projets.</p></article>
         </div>
-        <div class="video-item gold-frame">
-          <video autoplay muted loop playsinline>
-            <source src="video4 (1).mp4" type="video/mp4" />
-          </video>
+      </section>
+
+      <!-- WORKS / GALLERY -->
+      <section id="works" class="section works">
+        <h3 class="section-title">Nos réalisations</h3>
+        <div class="gallery">
+          <!-- utilisez vos images: Photofordecoration .png, decorativepaintbrush.png, etc -->
+          <figure class="work"><img src="Photofordecoration%20.png" alt="Projet 1" /></figure>
+          <figure class="work"><img src="background.png" alt="Projet 2" /></figure>
+          <figure class="work"><img src="decorativepaintbrush.png" alt="Projet 3" /></figure>
+          <figure class="work"><img src="logo.png" alt="Projet 4" /></figure>
+          <figure class="work"><img src="Photofordecoration%20.png" alt="Projet 5" /></figure>
+          <figure class="work"><img src="background.png" alt="Projet 6" /></figure>
         </div>
-        <div class="video-item gold-frame">
-          <video autoplay muted loop playsinline>
-            <source src="video5 (1).mp4" type="video/mp4" />
-          </video>
+      </section>
+
+      <!-- CONTACT / ORDER -->
+      <section id="contact" class="section contact">
+        <h3 class="section-title">Contact & Commande</h3>
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h4>Contactez-nous</h4>
+            <p>Email: <a href="mailto:whaletailcompany@gmail.com">whaletailcompany@gmail.com</a></p>
+            <p>WhatsApp: <a id="waLink" href="https://wa.me/213776532042" target="_blank">+213 77 653 2042</a></p>
+            <div class="socials">
+              <a href="#"><img src="YouTube.png" alt="YouTube" /></a>
+              <a href="#"><img src="WhatsApp.png" alt="WhatsApp" /></a>
+              <a href="#"><img src="gmail.png" alt="Gmail" /></a>
+            </div>
+          </div>
+
+          <div class="order-card">
+            <h4>Formulaire de demande</h4>
+            <form id="orderForm">
+              <input type="text" name="name" id="name" placeholder="Votre nom complet" required />
+              <input type="email" name="email" id="email" placeholder="Votre email" required />
+              <input type="text" name="budget" id="budget" placeholder="Budget (optionnel)" />
+              <textarea name="details" id="details" placeholder="Décrivez votre projet" required></textarea>
+              <div class="form-actions">
+                <button type="submit" class="primary">Envoyer la demande</button>
+                <button type="button" id="paypalBtn" class="ghost">Payer via PayPal</button>
+              </div>
+              <p class="note">Après réception, nous confirmons la méthode de paiement (PayPal / virement / crypto) via email ou WhatsApp.</p>
+            </form>
+          </div>
         </div>
+      </section>
+
+      <!-- COPYRIGHT FOOTER -->
+      <footer class="footer">
+        <div class="footer-inner">
+          <div class="copyright">© 2025 WhaleTail Company</div>
+          <button id="ipBtn" class="link">Droits d'auteur & Publication</button>
+        </div>
+      </footer>
+    </main>
+
+    <!-- COPYRIGHT POPUP -->
+    <div id="ipPopup" class="modal" aria-hidden="true">
+      <div class="modal-inner">
+        <button class="close" data-close="ipPopup">✕</button>
+        <h3>Droits d'auteur & Publication</h3>
+        <p>
+          Tous les contenus (images, vidéos, textes, designs) publiés sur ce site sont la propriété de WhaleTail Company
+          ou de ses partenaires. Toute reproduction, distribution ou réutilisation sans autorisation écrite est interdite.
+        </p>
+        <p>Pour toute demande d'utilisation, merci de contacter: <a href="mailto:whaletailcompany@gmail.com">whaletailcompany@gmail.com</a></p>
       </div>
     </div>
-  </section>
 
-  <!-- Section Contact -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2>Contactez-nous</h2>
-      <p class="intro-text">Remplissez le formulaire ci-dessous et notre équipe vous répondra rapidement.</p>
-
-      <form id="contactForm" class="contact-form">
-        <div class="form-row">
-          <input type="text" id="firstName" placeholder="Prénom" required />
-          <input type="text" id="lastName" placeholder="Nom" required />
-        </div>
-        <input type="tel" id="phone" placeholder="Numéro de téléphone" required />
-        <select id="serviceType" required>
-          <option value="">Type de service</option>
-          <option value="Identité visuelle">Identité visuelle</option>
-          <option value="Publicité">Publicité</option>
-          <option value="Motion design">Motion design</option>
-          <option value="Montage">Montage</option>
-          <option value="Développement">Développement</option>
-        </select>
-        <textarea id="details" placeholder="Détails du projet..." rows="5"></textarea>
-        <button type="submit" class="btn gold">Envoyer</button>
-        <p id="sentConfirm" class="confirm-message"></p>
-      </form>
-    </div>
-  </section>
-
-  <!-- Pied de page -->
-  <footer class="footer">
-    <img src="logo.png" alt="Megalodon logo" class="small-logo" />
-    <p class="footer-title">Megalodon — Agence de design graphique et de technologies numériques</p>
-    <p class="footer-copy">&copy; <span id="year"></span> Megalodon. Tous droits réservés.</p>
-    <div class="footer-socials">
-      <a href="mailto:whaletailcompany@gmail.com" aria-label="Gmail">
-        <img src="gmail.png" alt="Gmail" />
-      </a>
-      <a href="https://wa.me/213776532042" target="_blank" rel="noopener" aria-label="WhatsApp">
-        <img src="WhatsApp.png" alt="WhatsApp" />
-      </a>
-      <a href="https://www.youtube.com/@megalodoncompany" target="_blank" rel="noopener" aria-label="YouTube">
-        <img src="YouTube.png" alt="YouTube" />
-      </a>
-    </div>
-  </footer>
+  </div>
 
   <script src="script.js"></script>
 </body>
-        </html>
+          </html>
